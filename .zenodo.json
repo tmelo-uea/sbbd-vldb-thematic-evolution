@@ -1,0 +1,24 @@
+{
+  "title": "Following the Wave or Riding Alone? A Decade of Thematic Evolution at SBBD vs. VLDB (2016-2025) — Pipeline and Research Data",
+  "upload_type": "software",
+  "description": "Reproducible pipeline and research artifacts for the SBBD 2026 vision paper \"Following the Wave or Riding Alone? A Decade of Thematic Evolution at SBBD vs. VLDB (2016-2025)\". Includes the full pipeline (corpus collection, topic modeling with BERTopic, LLM-assisted label refinement, semantic alignment, and figure generation), the SBBD full-text corpus (489 papers, open access via the SBC Open Library), derived datasets, Claude-refined topic labels, bibliometric tables from OpenAlex and Semantic Scholar, and all paper figures. The VLDB full text is not redistributed (copyright) and can be reconstructed locally with the provided scripts. Source code is licensed under MIT; the data artifacts under release/data/ are licensed under CC-BY-4.0.",
+  "creators": [
+    {
+      "name": "de Melo, Tiago",
+      "affiliation": "Universidade do Estado do Amazonas"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "SBBD",
+    "VLDB",
+    "topic modeling",
+    "BERTopic",
+    "bibliometrics",
+    "thematic evolution",
+    "database research",
+    "natural language processing",
+    "reproducible research"
+  ]
+}

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite both the paper and this repository."
+title: "Following the Wave or Riding Alone? A Decade of Thematic Evolution at SBBD vs. VLDB (2016-2025) — Pipeline and Research Data"
+type: software
+authors:
+  - family-names: "de Melo"
+    given-names: "Tiago"
+    affiliation: "Universidade do Estado do Amazonas"
+license: MIT
+keywords:
+  - SBBD
+  - VLDB
+  - topic modeling
+  - BERTopic
+  - bibliometrics
+  - thematic evolution
+  - database research
+  - reproducible research
+preferred-citation:
+  type: conference-paper
+  title: "Following the Wave or Riding Alone? A Decade of Thematic Evolution at SBBD vs. VLDB (2016-2025)"
+  authors:
+    - family-names: "de Melo"
+      given-names: "Tiago"
+      affiliation: "Universidade do Estado do Amazonas"
+  collection-title: "Proceedings of the Brazilian Symposium on Databases (SBBD), Vision Papers track"
+  year: 2026
