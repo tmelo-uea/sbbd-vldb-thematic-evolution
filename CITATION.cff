@@ -7,6 +7,12 @@ authors:
     given-names: "Tiago"
     affiliation: "Universidade do Estado do Amazonas"
 license: MIT
+doi: 10.5281/zenodo.20763127
+repository-code: "https://github.com/tmelo-uea/sbbd-vldb-thematic-evolution"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20763127
+    description: "Archived snapshot of the pipeline and research data on Zenodo"
 keywords:
   - SBBD
   - VLDB

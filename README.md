@@ -1,5 +1,9 @@
 # Following the Wave or Riding Alone? A Decade of Thematic Evolution at SBBD vs. VLDB (2016–2025)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20763127.svg)](https://doi.org/10.5281/zenodo.20763127)
+[![Code License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
+[![Data License: CC BY 4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](LICENSE-data)
+
 Reproducible pipeline and research artifacts for the SBBD 2026 vision paper.
 
 This repository accompanies the paper:
@@ -127,6 +131,9 @@ difference between the peak-prevalence years in each venue.
 
 ## Citation
 
+Please cite the paper, and optionally the archived artifacts (DOI:
+[10.5281/zenodo.20763127](https://doi.org/10.5281/zenodo.20763127)):
+
 ```bibtex
 @inproceedings{demelo2026sbbdvldb,
   title     = {Following the Wave or Riding Alone? A Decade of Thematic
@@ -135,5 +142,16 @@ difference between the peak-prevalence years in each venue.
   booktitle = {Proceedings of the Brazilian Symposium on Databases (SBBD),
                Vision Papers track},
   year      = {2026}
+}
+
+@software{demelo2026sbbdvldb_artifacts,
+  title     = {Following the Wave or Riding Alone? A Decade of Thematic
+               Evolution at SBBD vs. VLDB (2016--2025) --- Pipeline and
+               Research Data},
+  author    = {de Melo, Tiago},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.20763127},
+  url       = {https://doi.org/10.5281/zenodo.20763127}
 }
 ```
