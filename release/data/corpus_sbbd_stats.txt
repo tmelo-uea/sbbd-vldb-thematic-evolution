@@ -1,0 +1,14 @@
+Total: 489 artigos extraídos, 0 falhas
+Caracteres totais: 13,688,530
+Média por artigo: 27,992 caracteres
+
+2016: 37 ok, 0 falhas
+2017: 35 ok, 0 falhas
+2018: 35 ok, 0 falhas
+2019: 36 ok, 0 falhas
+2020: 35 ok, 0 falhas
+2021: 41 ok, 0 falhas
+2022: 44 ok, 0 falhas
+2023: 50 ok, 0 falhas
+2024: 85 ok, 0 falhas
+2025: 91 ok, 0 falhas

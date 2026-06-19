@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Following the Wave or Riding Alone? — Research Data</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Georgia", serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a2e;
+      background: #f8f9fb;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 2.5rem 2rem 2rem;
+      border-bottom: 4px solid #e94560;
+    }
+
+    header h1 {
+      font-size: 1.55rem;
+      font-weight: normal;
+      max-width: 820px;
+      line-height: 1.4;
+    }
+
+    header p.subtitle {
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+      color: #a8b2d8;
+      font-style: italic;
+    }
+
+    header .badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.3rem 0.8rem;
+      background: #e94560;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1a1a2e;
+      margin: 2.5rem 0 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #e94560;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 1.6rem 0 0.4rem;
+      color: #16213e;
+    }
+
+    p { margin-bottom: 0.8rem; color: #333; }
+
+    /* Stats strip */
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .stat-box {
+      flex: 1 1 140px;
+      background: #fff;
+      border: 1px solid #dde;
+      border-top: 3px solid #e94560;
+      border-radius: 4px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat-box .num {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #1a1a2e;
+      line-height: 1.1;
+    }
+
+    .stat-box .lbl {
+      font-size: 0.78rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+
+    /* Dataset cards */
+    .dataset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #dde;
+      border-radius: 5px;
+      padding: 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card .card-title {
+      font-weight: bold;
+      font-size: 0.92rem;
+      margin-bottom: 0.35rem;
+      color: #1a1a2e;
+    }
+
+    .card .card-desc {
+      font-size: 0.85rem;
+      color: #555;
+      flex: 1;
+      line-height: 1.5;
+    }
+
+    .card .card-meta {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 0.6rem;
+    }
+
+    .card a.dl {
+      display: inline-block;
+      margin-top: 0.7rem;
+      padding: 0.3rem 0.8rem;
+      background: #1a1a2e;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-family: monospace;
+      align-self: flex-start;
+    }
+
+    .card a.dl:hover { background: #e94560; }
+
+    /* Topics table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+    }
+
+    th {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+    }
+
+    td {
+      padding: 0.42rem 0.7rem;
+      border-bottom: 1px solid #eee;
+      color: #333;
+    }
+
+    tr:nth-child(even) td { background: #f4f5f8; }
+
+    /* Figures */
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .fig-card {
+      background: #fff;
+      border: 1px solid #dde;
+      border-radius: 4px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .fig-card a {
+      display: block;
+      padding: 0.8rem 0.5rem 0.6rem;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .fig-card a:hover { background: #f0f2f8; }
+
+    .fig-icon {
+      font-size: 2.2rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+      padding: 2rem 1rem;
+      border-top: 1px solid #dde;
+    }
+
+    code {
+      font-family: monospace;
+      background: #eef;
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      font-size: 0.88em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Following the Wave or Riding Alone?<br>
+      A Decade of Thematic Evolution at SBBD vs. VLDB (2016–2025)</h1>
+  <p class="subtitle">Tiago de Melo (Universidade do Estado do Amazonas) — research data and artifacts</p>
+  <span class="badge">Accepted at SBBD 2026 · Vision Papers track</span>
+</header>
+
+<div class="container">
+
+  <h2>Overview</h2>
+  <p>
+    This page provides access to all datasets, topic-modeling outputs, and figures
+    produced for the study. The paper presents the first longitudinal, full-text
+    topic-modeling comparison between SBBD and VLDB over the period 2016–2025,
+    complemented by a bibliometric characterisation of both venues.
+  </p>
+  <p>
+    Data were collected from the
+    <a href="https://sol.sbc.org.br">SBC Open Library (SOL)</a>,
+    <a href="https://vldb.org/pvldb/">vldb.org</a>,
+    <a href="https://openalex.org">OpenAlex</a>, and
+    <a href="https://www.semanticscholar.org">Semantic Scholar</a>.
+    Topic modeling was performed with
+    <a href="https://maartengr.github.io/BERTopic/">BERTopic</a>
+    using multilingual sentence embeddings.
+  </p>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">489</div><div class="lbl">SBBD papers<br>(2016–2025)</div></div>
+    <div class="stat-box"><div class="num">3,036</div><div class="lbl">VLDB papers<br>(2016–2025)</div></div>
+    <div class="stat-box"><div class="num">31</div><div class="lbl">SBBD topics<br>identified</div></div>
+    <div class="stat-box"><div class="num">35</div><div class="lbl">VLDB topics<br>identified</div></div>
+    <div class="stat-box"><div class="num">58%</div><div class="lbl">SBBD topics<br>aligned with VLDB</div></div>
+    <div class="stat-box"><div class="num">34M+</div><div class="lbl">running words<br>in full-text corpus</div></div>
+  </div>
+
+  <!-- ======================================================= -->
+  <h2>Datasets</h2>
+
+  <h3>Full-text corpus</h3>
+  <div class="dataset-grid">
+
+    <div class="card">
+      <div class="card-title">corpus_sbbd.jsonl</div>
+      <div class="card-desc">
+        Full-text corpus of all 489 SBBD papers (2016–2025), one JSON object per
+        line with <code>{year, filename, text}</code>. Extracted from the openly
+        available SBC Open Library (SOL). The VLDB full text is not redistributed
+        (copyright); reconstruct it locally with the provided pipeline.
+      </div>
+      <div class="card-meta">489 papers · ~2.1M words · open access</div>
+      <a class="dl" href="data/corpus_sbbd.jsonl">↓ Download JSONL</a>
+    </div>
+
+  </div>
+
+  <h3>Corpus-level bibliometrics</h3>
+  <div class="dataset-grid">
+
+    <div class="card">
+      <div class="card-title">bibliometrics_comparison.csv</div>
+      <div class="card-desc">
+        Year-by-year comparison of SBBD and VLDB across 14 bibliometric indicators:
+        paper count, pages, authors, citations, references, international collaboration,
+        and open-access rate (2016–2025).
+      </div>
+      <div class="card-meta">10 rows × 15 columns</div>
+      <a class="dl" href="data/bibliometrics_comparison.csv">↓ Download CSV</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">topic_matches.csv</div>
+      <div class="card-desc">
+        Semantic alignment between all 31 SBBD topics and 35 VLDB topics.
+        Each row contains the best-matching VLDB topic for each SBBD topic,
+        cosine similarity score, and a boolean match flag (threshold 0.60).
+      </div>
+      <div class="card-meta">31 rows × 4 columns</div>
+      <a class="dl" href="data/topic_matches.csv">↓ Download CSV</a>
+    </div>
+
+  </div>
+
+  <h3>Per-paper metadata — SBBD</h3>
+  <div class="dataset-grid">
+
+    <div class="card">
+      <div class="card-title">sbbd_metadata.csv</div>
+      <div class="card-desc">
+        Per-paper Semantic Scholar metadata for 488 of 489 SBBD papers:
+        citation count, influential citation count, reference count,
+        fields of study, open access status, TLDR, author count, venue,
+        DOI, and ArXiv ID where available.
+      </div>
+      <div class="card-meta">489 rows · S2 coverage: 99.8%</div>
+      <a class="dl" href="data/per_paper/sbbd_metadata.csv">↓ Download CSV</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">sbbd_titles_dois.csv</div>
+      <div class="card-desc">
+        Canonical titles and DOIs for all 489 SBBD papers, recovered from the
+        SBC Open Library (SOL). Includes the SOL article ID extracted from
+        each paper's filename.
+      </div>
+      <div class="card-meta">489 rows · DOI coverage: 98.9%</div>
+      <a class="dl" href="data/per_paper/sbbd_titles_dois.csv">↓ Download CSV</a>
+    </div>
+
+  </div>
+
+  <h3>Per-paper metadata — VLDB</h3>
+  <div class="dataset-grid">
+
+    <div class="card">
+      <div class="card-title">vldb_metadata.csv</div>
+      <div class="card-desc">
+        Full OpenAlex metadata for all 3,036 VLDB papers: title, authors,
+        affiliations, countries, citations, references, open-access status,
+        abstract, OpenAlex concepts and topics, language, volume, and issue.
+      </div>
+      <div class="card-meta">3,036 rows × 35 columns · 100% coverage</div>
+      <a class="dl" href="data/per_paper/vldb_metadata.csv">↓ Download CSV</a>
+    </div>
+
+  </div>
+
+  <!-- ======================================================= -->
+  <h2>Topic Modeling Outputs</h2>
+
+  <h3>SBBD — 31 topics</h3>
+  <div class="dataset-grid">
+
+    <div class="card">
+      <div class="card-title">refined_labels.json</div>
+      <div class="card-desc">
+        Claude-refined topic labels for all 31 SBBD topics (topic ID → label string).
+      </div>
+      <a class="dl" href="data/sbbd/refined_labels.json">↓ Download JSON</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">topic_info.csv</div>
+      <div class="card-desc">
+        BERTopic topic information: topic ID, document count, top keywords,
+        and refined label for each of the 31 topics.
+      </div>
+      <a class="dl" href="data/sbbd/topic_info.csv">↓ Download CSV</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">topic_evolution.csv</div>
+      <div class="card-desc">
+        Relative frequency (% of papers per year) of each SBBD topic from 2016 to 2025.
+        Rows are topic labels; columns are years.
+      </div>
+      <a class="dl" href="data/sbbd/topic_evolution.csv">↓ Download CSV</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">docs_topics.csv</div>
+      <div class="card-desc">
+        Paper-to-topic assignment for all 489 SBBD papers: filename, year,
+        and assigned topic ID (−1 for outliers, 20.4% of papers).
+      </div>
+      <a class="dl" href="data/sbbd/docs_topics.csv">↓ Download CSV</a>
+    </div>
+
+  </div>
+
+  <h3>VLDB — 35 topics</h3>
+  <div class="dataset-grid">
+
+    <div class="card">
+      <div class="card-title">refined_labels.json</div>
+      <div class="card-desc">
+        Claude-refined topic labels for all 35 VLDB topics (topic ID → label string).
+      </div>
+      <a class="dl" href="data/vldb/refined_labels.json">↓ Download JSON</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">topic_info.csv</div>
+      <div class="card-desc">
+        BERTopic topic information: topic ID, document count, top keywords,
+        and refined label for each of the 35 topics.
+      </div>
+      <a class="dl" href="data/vldb/topic_info.csv">↓ Download CSV</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">topic_evolution.csv</div>
+      <div class="card-desc">
+        Relative frequency (% of papers per year) of each VLDB topic from 2016 to 2025.
+        Rows are topic labels; columns are years.
+      </div>
+      <a class="dl" href="data/vldb/topic_evolution.csv">↓ Download CSV</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">docs_topics.csv</div>
+      <div class="card-desc">
+        Paper-to-topic assignment for all 3,036 VLDB papers: filename, year,
+        and assigned topic ID (−1 for outliers, 29.2% of papers).
+      </div>
+      <a class="dl" href="data/vldb/docs_topics.csv">↓ Download CSV</a>
+    </div>
+
+  </div>
+
+  <!-- ======================================================= -->
+  <h2>SBBD Topics (31)</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Topic Label</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>0</td><td>Graph Processing and Database Performance Tuning</td></tr>
+      <tr><td>1</td><td>High-Dimensional Data Clustering Methods</td></tr>
+      <tr><td>2</td><td>Text Classification and Natural Language Processing</td></tr>
+      <tr><td>3</td><td>Data Management and Governance</td></tr>
+      <tr><td>4</td><td>Hardware-Aware Database Query Optimization</td></tr>
+      <tr><td>5</td><td>Graph-Based Data Organization and Management</td></tr>
+      <tr><td>6</td><td>Social Coding Collaboration Analysis</td></tr>
+      <tr><td>7</td><td>Data Quality and Entity Resolution</td></tr>
+      <tr><td>8</td><td>Similarity Join Algorithms and Data Integration</td></tr>
+      <tr><td>9</td><td>Temporal Sequences and Pattern Queries in Databases</td></tr>
+      <tr><td>10</td><td>Data Models and Dataset Management</td></tr>
+      <tr><td>11</td><td>Spatial-Textual Data Indexing</td></tr>
+      <tr><td>12</td><td>Sentiment Analysis and Data Mining</td></tr>
+      <tr><td>13</td><td>Urban Traffic Anomaly Detection</td></tr>
+      <tr><td>14</td><td>Data Mining and Integrity Constraints Discovery</td></tr>
+      <tr><td>15</td><td>Brazilian Symposium on Databases (proceedings)</td></tr>
+      <tr><td>16</td><td>Time Series Forecasting for Brazilian Environmental Applications</td></tr>
+      <tr><td>17</td><td>Web Data Integration and Quality</td></tr>
+      <tr><td>18</td><td>Spatial and Geographic Data Management</td></tr>
+      <tr><td>19</td><td>Data Source Quality and Profiling</td></tr>
+      <tr><td>20</td><td>Database Applications in Medical and Scientific Data Analysis</td></tr>
+      <tr><td>21</td><td>Data Schema and Evolution Analysis</td></tr>
+      <tr><td>22</td><td>Multimodal Image Retrieval and Data Processing</td></tr>
+      <tr><td>23</td><td>Scientific Workflow Data Processing Optimization</td></tr>
+      <tr><td>24</td><td>Data Analytics for Brazilian Applications</td></tr>
+      <tr><td>25</td><td>Privacy-Preserving Data Management Systems</td></tr>
+      <tr><td>26</td><td>Public Transportation Data Management</td></tr>
+      <tr><td>27</td><td>RDF Data Storage and Query Processing</td></tr>
+      <tr><td>28</td><td>Ontology Alignment and Topic Modeling</td></tr>
+      <tr><td>29</td><td>Semantic Data Classification and Integration</td></tr>
+      <tr><td>30</td><td>Data Ecosystems and Economic Analysis</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ======================================================= -->
+  <h2>Figures</h2>
+  <p>All figures are available as PDF. Click to open.</p>
+
+  <div class="figure-grid">
+    <div class="fig-card"><a href="plots/bib_overview.pdf">
+      <span class="fig-icon">📊</span>Bibliometric Overview<br>(6-panel)
+    </a></div>
+    <div class="fig-card"><a href="plots/bib_growth.pdf">
+      <span class="fig-icon">📈</span>Paper Growth<br>(CAGR)
+    </a></div>
+    <div class="fig-card"><a href="plots/bib_citations.pdf">
+      <span class="fig-icon">📈</span>Average Citations<br>per Year
+    </a></div>
+    <div class="fig-card"><a href="plots/bib_authors.pdf">
+      <span class="fig-icon">👥</span>Authors<br>per Paper
+    </a></div>
+    <div class="fig-card"><a href="plots/bib_intl.pdf">
+      <span class="fig-icon">🌎</span>International<br>Collaboration
+    </a></div>
+    <div class="fig-card"><a href="plots/bib_pages.pdf">
+      <span class="fig-icon">📄</span>Pages<br>per Paper
+    </a></div>
+    <div class="fig-card"><a href="plots/bib_oa.pdf">
+      <span class="fig-icon">🔓</span>Open Access<br>Rate
+    </a></div>
+    <div class="fig-card"><a href="plots/alignment_heatmap.pdf">
+      <span class="fig-icon">🟦</span>Semantic Alignment<br>Heatmap (31×35)
+    </a></div>
+    <div class="fig-card"><a href="plots/matched_evolution.pdf">
+      <span class="fig-icon">📉</span>Matched Topics<br>Evolution
+    </a></div>
+    <div class="fig-card"><a href="plots/exclusive_topics.pdf">
+      <span class="fig-icon">🔀</span>Exclusive Topics<br>by Venue
+    </a></div>
+    <div class="fig-card"><a href="plots/sbbd_heatmap.pdf">
+      <span class="fig-icon">🟥</span>SBBD Topic<br>Heatmap
+    </a></div>
+    <div class="fig-card"><a href="plots/vldb_heatmap.pdf">
+      <span class="fig-icon">🟦</span>VLDB Topic<br>Heatmap
+    </a></div>
+    <div class="fig-card"><a href="plots/sbbd_evolution.pdf">
+      <span class="fig-icon">📈</span>SBBD Topic<br>Evolution
+    </a></div>
+    <div class="fig-card"><a href="plots/vldb_evolution.pdf">
+      <span class="fig-icon">📈</span>VLDB Topic<br>Evolution
+    </a></div>
+  </div>
+
+  <!-- ======================================================= -->
+  <h2>Data Schema</h2>
+
+  <h3>bibliometrics_comparison.csv</h3>
+  <table>
+    <thead><tr><th>Column</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>Ano</code></td><td>Year (2016–2025)</td></tr>
+      <tr><td><code>SBBD_artigos</code></td><td>Number of SBBD papers</td></tr>
+      <tr><td><code>VLDB_artigos</code></td><td>Number of VLDB papers</td></tr>
+      <tr><td><code>SBBD_paginas</code></td><td>Average pages per SBBD paper</td></tr>
+      <tr><td><code>VLDB_paginas</code></td><td>Average pages per VLDB paper</td></tr>
+      <tr><td><code>SBBD_autores</code></td><td>Average authors per SBBD paper</td></tr>
+      <tr><td><code>VLDB_autores</code></td><td>Average authors per VLDB paper</td></tr>
+      <tr><td><code>SBBD_citacoes_media</code></td><td>Average citation count per SBBD paper (Semantic Scholar)</td></tr>
+      <tr><td><code>VLDB_citacoes_media</code></td><td>Average citation count per VLDB paper (OpenAlex)</td></tr>
+      <tr><td><code>SBBD_refs_media</code></td><td>Average references per SBBD paper</td></tr>
+      <tr><td><code>VLDB_refs_media</code></td><td>Average references per VLDB paper</td></tr>
+      <tr><td><code>SBBD_pct_intl</code></td><td>% of SBBD papers with international co-authorship</td></tr>
+      <tr><td><code>VLDB_pct_intl</code></td><td>% of VLDB papers with international co-authorship</td></tr>
+      <tr><td><code>SBBD_pct_oa</code></td><td>% open access (SBBD = 100% via SOL)</td></tr>
+      <tr><td><code>VLDB_pct_oa</code></td><td>% open access (OpenAlex)</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:1.4rem">topic_matches.csv</h3>
+  <table>
+    <thead><tr><th>Column</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>sbbd_topic</code></td><td>SBBD topic label</td></tr>
+      <tr><td><code>vldb_topic</code></td><td>Best-matching VLDB topic label</td></tr>
+      <tr><td><code>similarity</code></td><td>Cosine similarity between topic label embeddings</td></tr>
+      <tr><td><code>matched</code></td><td>True if similarity ≥ 0.60</td></tr>
+    </tbody>
+  </table>
+
+</div>
+
+<footer>
+  Research data for &ldquo;Following the Wave or Riding Alone?&rdquo; &mdash; SBBD 2026, Vision Papers track.
+  Code (MIT) and data (CC-BY-4.0) by Tiago de Melo.
+  Data sourced from SBC Open Library, vldb.org, OpenAlex, and Semantic Scholar.
+</footer>
+
+</body>
+</html>

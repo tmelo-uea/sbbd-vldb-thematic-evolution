@@ -1,0 +1,32 @@
+sbbd_topic,vldb_topic,similarity,matched
+Data Models and Dataset Management,Dataset Management and Data Quality,0.8353514671325684,True
+Data Management and Governance,Data Management and Processing Systems,0.8099011182785034,True
+Privacy-Preserving Data Management Systems,Differential Privacy for Database Protection,0.8052763938903809,True
+Hardware-Aware Database Query Optimization,Query Optimization and Processing Techniques,0.7843059301376343,True
+Graph Processing and Database Performance Tuning,Main-Memory Database Performance Optimization,0.7677546739578247,True
+Data Source Quality and Profiling,Dataset Management and Data Quality,0.7537743449211121,True
+Data Quality and Entity Resolution,Dataset Management and Data Quality,0.7126377820968628,True
+Graph-Based Data Organization and Management,Graph Clustering and Network Analysis,0.7121131420135498,True
+Similarity Join Algorithms and Data Integration,Set Similarity Search and Matching,0.6853761672973633,True
+RDF Data Storage and Query Processing,Database Data Processing and Schema Management,0.6717338562011719,True
+Web Data Integration and Quality,Database Query Processing and Data Integration,0.6516454815864563,True
+Semantic Data Classification and Integration,Data Analysis and Query Processing,0.6514745354652405,True
+Text Classification and Natural Language Processing,Natural Language Querying of Databases,0.6500490307807922,True
+High-Dimensional Data Clustering Methods,Graph Clustering and Network Analysis,0.6430456638336182,True
+Data Mining and Integrity Constraints Discovery,Data Quality and Anomaly Detection,0.6418008804321289,True
+Temporal Sequences and Pattern Queries in Databases,Database Data Processing and Schema Management,0.6337552070617676,True
+Data Analytics for Brazilian Applications,Data Analytics and Recommendation Systems,0.631317675113678,True
+Database Applications in Medical and Scientific Data Analysis,Data Analysis and Query Processing,0.631306529045105,True
+Scientific Workflow Data Processing Optimization,Data Analysis and Query Processing,0.5928119421005249,False
+Public Transportation Data Management,Data Management and Processing Systems,0.5874356627464294,False
+Data Ecosystems and Economic Analysis,Dataset Management and Data Quality,0.586782693862915,False
+Sentiment Analysis and Data Mining,Data Analysis and Query Processing,0.5831109881401062,False
+Data Schema and Evolution Analysis,Data Analysis and Query Processing,0.5826069116592407,False
+Spatial and Geographic Data Management,Road Network Data Analysis and Query Processing,0.5662307143211365,False
+Spatial-Textual Data Indexing,Natural Language Querying of Databases,0.5601390600204468,False
+Social Coding Collaboration Analysis,Social Network Influence and Maximization,0.5517376661300659,False
+Urban Traffic Anomaly Detection,Data Quality and Anomaly Detection,0.548479437828064,False
+Brazilian Symposium on Databases,Natural Language Querying of Databases,0.5429177284240723,False
+Multimodal Image Retrieval and Data Processing,Cloud Database Systems and Clustering,0.4933929443359375,False
+Time Series Forecasting for Brazilian Environmental Applications,Time Series Data Stream Analysis,0.47570377588272095,False
+Ontology Alignment and Topic Modeling,Graph Clustering and Network Analysis,0.3892631232738495,False

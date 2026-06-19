@@ -1,0 +1,26 @@
+# Core data / numeric
+numpy
+pandas
+
+# Topic modeling
+bertopic
+sentence-transformers
+umap-learn
+hdbscan
+scikit-learn
+
+# LLM-assisted label refinement
+anthropic
+python-dotenv
+
+# PDF text extraction + OCR
+pymupdf
+pytesseract
+Pillow
+
+# Web scraping / API access
+requests
+beautifulsoup4
+
+# Plotting
+matplotlib

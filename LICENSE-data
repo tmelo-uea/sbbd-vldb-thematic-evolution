@@ -1,0 +1,43 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Tiago de Melo
+
+The DATA artifacts in this repository — everything under `release/data/`,
+including the derived datasets, bibliometric tables, topic-modeling outputs,
+Claude-refined topic labels, and the SBBD full-text corpus — are licensed under
+the Creative Commons Attribution 4.0 International License.
+
+You are free to:
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material for any purpose,
+    even commercially
+
+Under the following terms:
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made.
+
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+----------------------------------------------------------------------
+Attribution / how to cite
+----------------------------------------------------------------------
+
+Tiago de Melo (2026). "Following the Wave or Riding Alone? A Decade of
+Thematic Evolution at SBBD vs. VLDB (2016–2025)." Brazilian Symposium on
+Databases (SBBD 2026), Vision Papers track.
+
+----------------------------------------------------------------------
+Sources and third-party rights
+----------------------------------------------------------------------
+
+The SBBD full-text corpus (release/data/corpus_sbbd.jsonl) is derived from
+papers published in the SBC Open Library (https://sol.sbc.org.br), which are
+openly accessible. Bibliometric metadata is derived from OpenAlex
+(https://openalex.org) and Semantic Scholar (https://www.semanticscholar.org).
+
+The VLDB full text is NOT redistributed in this repository because the
+Proceedings of the VLDB Endowment are subject to their own copyright terms.
+Only aggregated/derived outputs (topic assignments, labels, and OpenAlex
+metadata) are included. The VLDB full-text corpus can be reconstructed locally
+from vldb.org using the scripts provided (download_vldb.py, extract_text_vldb.py).

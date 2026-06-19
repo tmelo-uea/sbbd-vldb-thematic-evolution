@@ -1,0 +1,29 @@
+# Secrets — never commit real API keys
+chaves.env
+
+# Raw, copyright-protected source PDFs (not redistributable)
+pdfs/
+vldb_pdfs/
+
+# VLDB full-text corpus (copyright-protected; regenerate with the pipeline)
+vldb_corpus.jsonl
+vldb_corpus_stats.txt
+
+# Heavy intermediate artifacts (regenerable from the pipeline)
+results/
+*.npy
+*.safetensors
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+*.log
+texput.log
+.claude/
